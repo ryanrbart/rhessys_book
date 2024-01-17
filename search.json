@@ -1,0 +1,87 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ecohydrologic Modeling with RHESSys",
+    "section": "",
+    "text": "Welcome\nThis is the online home for the book “Ecohydrological Modeling with RHESSys”.\nEcohydrology is the study of the connections and feedbacks between hydrological, ecological, and related systems. These systems are highly interconnected, such that changes to one system often affects the other systems. For example, increases in forest biomass due to fire suppression can alter forest transpiration and subsequently affect streamflow and water supplies to cities and agriculture. Due to the complexity of these integrative systems, many research questions are inadequately answered when simply addressing one system or another. Instead, an ecohydrological perspective is often necessary.\nEcohydologic modeling is the use of integrative tools to make projections about how hydrological and ecological systems will respond to distruptions such as land cover change or climate change. While ecohydologic modeling is often more complex than stand-alone hydrological and ecological modeling, this increase in complexity can be compensated by novel and emergent behaviors that would not be identifiable in non-integrative models.\nThis book will teach you how to model using RHESSys, the Regional Hydro-Ecologic Simulation System. RHESSys is a well-established ecohydrological model that couples water, carbon, and nitrogen processes. RHESSys has been used in numerous studies to examine processes such streamflow change, carbon sequestration, urban hydrology, water quality, forest mortality, vegetation phenology, wildfire, and more. If you think that RHESSys may be right for your research, we hope this book eases the process of getting the model set up and running, so you can spend more time conducting your simulations and analyzing your results.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#what-to-expect-from-this-book",
+    "href": "index.html#what-to-expect-from-this-book",
+    "title": "Ecohydrologic Modeling with RHESSys",
+    "section": "What to expect from this book",
+    "text": "What to expect from this book\n“Ecohydrological Modeling with RHESSys” is designed to help you get started with RHESSys. Using the example dataset, this book will walk you through all the basic steps needed to install, setup, and run simulations with RHESSys. We also include explanations for some of the commonly-used advanced features within RHESSys, such as manipulating vegetation and running simulations with the fire model.\nThat said, this book is not meant to be a definitive guide for all things that can be done in RHESSys. For functionality beyond what is contained in this book, please refer to the RHESSys Wiki. This book is also not intended to provide the underlying theory of the model, as this is beyond the book’s scope. For more details about the science behind RHESSys, see the recommended RHESSys reading.\nThis book is primarily about interfacing with RHESSys. The direct way to interface with the model is via the command line and through a number of RHESSys-specific files that get passed to the model. However, as operating via the command line can be burdensome for repeated tasks, and assembling the RHESSys-specific files can be very time-consuming, a number of interface programs have been developed over the years to ease set up and operation of the model. In this book we will emphasize a set of interface programs written in the R programming language, as these interface programs are the best maintained and provide the most functionality for RHESSys. When appropriate, we will discuss how to interface directly with the model via the command line, as this can be useful at times.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#about-the-authors",
+    "href": "index.html#about-the-authors",
+    "title": "Ecohydrologic Modeling with RHESSys",
+    "section": "About the authors",
+    "text": "About the authors\nRyan R. Bart is an Assistant Professional Researcher at University of California, Merced. Ryan received his PhD in Geography from a joint-doctoral program between San Diego State University and the University of California, Santa Barbara. He has implemented a number of tools for improving the way RHESSys is run, such as RHESSysIOinR. He is an active developer for RHESSys, including implementing the fire effects component of the fire model. You can learn more about Ryan at his website.\nJanet S. Choate is the manager of the Tague Team Lab at University of California, Santa Barbara and has over 20 years of experience working with RHESSys. Janet earned her Masters in Geography at San Diego State University. She has led numerous training sessions with RHESSys and has contributed extensively to the RHESSys Wiki.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "1.1 What is RHESSys?\nForthcoming",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#sec-rec_reading",
+    "href": "introduction.html#sec-rec_reading",
+    "title": "1  Introduction",
+    "section": "1.2 Recommended RHESSys reading",
+    "text": "1.2 Recommended RHESSys reading\nIf you are new to RHESSys, it can be helpful to dive into the literature and become more familiar with the model processes and functionality. In this section, we highlight some of the important papers that should help you started.\n\nWhere to start\nTague & Band 2004: This paper covers the fundamental processes in the current version of the RHESSys. While there have been many updates in the two decades since this paper was published, most of the core processes remain the same. If you have time for only one paper, this is the place to start.\nChen et al. 2020: This recent paper provides a review of RHESSys publications and usage over the past 30 years.\n\n\nComparison of RHESSys to other models\nForthcoming\n\n\nEarly RHESSys and foundational papers\nBand et al. 1991: This is the first paper to describe the original version of RHESSys. The original version would later get revised to the Tague and Band 2004 version. This paper details the merging of Biome-BGC with a digital elevation model.\nBand et al. 1993: Early RHESSys paper that describes how TOPMODEL (Beven & Kirby 1979) was integrated into the model. TOPMODEL remains available in the RHESSys as one of the two options for routing water to the stream.\nWigmosta et al. 1994: The explicit routing option for routing water to the stream within RHESSys was adapted from DHSVM.\nRunning & Coughlan 1988, Running & Hunt 1993: The ecophysiological model within RHESSys was adapted from Biome-BGC.\nRunning et al. 1987: The MTN-Clim model was incorporated into RHESSys to extrapolate inputted climate variables across the watershed, accounting for varying topographically.\nParton et al. 1996 The nitrogen component of RHESSys has its origins in the Century model.\n\n\nNew Processes in RHESSys\nNew functionality has been added to RHESSys since the Tague and Band 2004 paper. Unfortunately, not all the new functionality has made its way into the literature. Here we highlight some of the functionality that did.\n\nCarbon\nTague et al. 2013: This paper introduces mechanisms for drought-based mortality of vegetation based on non-structural carbohydrate deficiencies.\nGarcia et al. 2016: This paper introduces different carbon allocation strategies for vegetation within RHESSys\n\n\nFire\nKennedy et al. 2017: This paper describes the dynamic fire-spread model, WMFire, that has been integrated into RHESSys.\nBart et al. 2020: This paper describes how fire effects are implemented in RHESSys, providing a measure of fire severity based on ladder fuels.\n\n\nMulti-Scale Routing\nBurke et al. 2021: This paper introduces multi-scale routing to RHESSys, allowing users to specify hydrological and energy interactions between sub-patch vegetation.",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#prerequisites",
+    "href": "introduction.html#prerequisites",
+    "title": "1  Introduction",
+    "section": "1.3 Prerequisites",
+    "text": "1.3 Prerequisites\nWe have tried to keep this book focused on the steps necessary to run RHESSys. Consequently, we have had to make the assumption that you, the user, have obtained a number of fundamental skills that are needed to successfully model using RHESSys. While it might be possible to get by without learning the following skills, modeling with RHESSys will be easier with the more tools that you obtain.\n\nModeling\nWe assume that the user has obtained basic modeling understanding. This means they understand terms like parameter, calibration, validation, objective function, etc. Successful implementation and research design necessitates a basic modeling understanding. Many resources exist for obtaining modeling knowledge.\n\nResource here\n\n\n\nBasic R knowledge.\nTo model with RHESSys, you will need a basic understanding of R. The RHESSys input/output tools used in this book are all based in R. If you are new to programming in R, a good resource is:\n\nHands on Programming with R by Garrett Grolemund.\n\nIf you are familiar with R and want a refresher that goes a bit beyond the basics, we recommend:\n\nR for Data Science by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\n\n\n\nGIS and raster.\nForthcoming\n\n\nBasic unix/linux understanding\nOften needed when installing RHESSys…\n\n\nGit and Github\nThe RHESSys model can be found on Github. We will walk through the basics of cloning a repository in this book, but knowledge of version control and concepts like branching can be helpful if you expect to move beyond simply using the model. Github has extensive tutorials and documentation about Git and Github.",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#getting-help",
+    "href": "introduction.html#getting-help",
+    "title": "1  Introduction",
+    "section": "1.4 Getting help",
+    "text": "1.4 Getting help\nDue to the number of processes involved with RHESSys, the model can be challenging at times. There are a number of resources to help you along (besides the book that you are currently reading).\nFirst and foremost, the RHESSys Wiki is the most comprehensive resource for the model. By definition, a wiki is a collaborative website generated by its users. If you feel inclined while you learn about and become familiar with the model, please feel free to contribute to the wiki.\nRHESSys trainings are held periodically. We recommend getting on the RHESSys mailing list to be updated as trainings becoming available.\nFinally, the RHESSys community is changing as the community grows. We encourage members who want to be active to do so.",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#acknowledgements",
+    "href": "introduction.html#acknowledgements",
+    "title": "1  Introduction",
+    "section": "1.5 Acknowledgements",
+    "text": "1.5 Acknowledgements\nForthcoming",
+    "crumbs": [
+      "Welcome",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  }
+]
