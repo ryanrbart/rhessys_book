@@ -1,0 +1,106 @@
+# Introduction
+
+## What is RHESSys?
+
+Forthcoming
+
+## Recommended RHESSys reading {#sec-rec_reading}
+
+If you are new to RHESSys, it can be helpful to dive into the literature and become more familiar with the model processes and functionality.
+In this section, we highlight some of the important papers that should help you started.
+ 
+### Where to start
+
+[Tague & Band 2004](https://doi.org/10.1175/1087-3562(2004)8<1:RRHSSO>2.0.CO;2): This paper covers the fundamental processes in the current version of the RHESSys. While there have been many updates in the two decades since this paper was published, most of the core processes remain the same. If you have time for only one paper, this is the place to start.
+
+[Chen et al. 2020](https://doi.org/10.3390/w12102878): This recent paper provides a review of RHESSys publications and usage over the past 30 years.
+
+### Comparison of RHESSys to other models
+
+Forthcoming
+
+### Early RHESSys and foundational papers
+
+[Band et al. 1991](https://doi.org/10.1016/0304-3800(91)90199-B): This is the first paper to describe the original version of RHESSys. The original version would later get revised to the Tague and Band 2004 version. This paper details the merging of Biome-BGC with a digital elevation model.
+
+[Band et al. 1993](https://doi.org/10.1016/0168-1923(93)90024-C): Early RHESSys paper that describes how TOPMODEL ([Beven & Kirby 1979](https://doi.org/10.1080/02626667909491834)) was integrated into the model. TOPMODEL remains available in the RHESSys as one of the two options for routing water to the stream.
+
+[Wigmosta et al. 1994](https://doi.org/10.1029/94WR00436): The explicit routing option for routing water to the stream within RHESSys was adapted from DHSVM.
+
+[Running & Coughlan 1988](https://doi.org/10.1016/0304-3800(88)90112-3), [Running & Hunt 1993](http://dx.doi.org/10.1016/B978-0-12-233440-5.50014-2): The ecophysiological model within RHESSys was adapted from Biome-BGC.
+
+[Running et al. 1987](https://doi.org/10.1139/x87-081): The MTN-Clim model was incorporated into RHESSys to extrapolate inputted climate variables across the watershed, accounting for varying topographically. 
+
+[Parton et al. 1996](https://doi.org/10.1029/96GB01455) The nitrogen component of RHESSys has its origins in the Century model.
+
+### New Processes in RHESSys
+
+New functionality has been added to RHESSys since the Tague and Band 2004 paper. Unfortunately, not all the new functionality has made its way into the literature. Here we highlight some of the functionality that did. 
+
+#### Carbon
+
+[Tague et al. 2013](https://doi.org/10.1371/journal.pone.0080286): This paper introduces mechanisms for drought-based mortality of vegetation based on non-structural carbohydrate deficiencies.
+
+[Garcia et al. 2016](https://doi.org/10.1016/j.ecolmodel.2016.09.021): This paper introduces different carbon allocation strategies for vegetation within RHESSys
+
+#### Fire
+
+[Kennedy et al. 2017](https://doi.org/10.1071/WF16169): This paper describes the dynamic fire-spread model, WMFire, that has been integrated into RHESSys.
+
+[Bart et al. 2020](https://doi.org/10.1016/j.ecolmodel.2019.108880): This paper describes how fire effects are implemented in RHESSys, providing a measure of fire severity based on ladder fuels. 
+
+#### Multi-Scale Routing
+
+[Burke et al. 2021](https://doi.org/10.3389/ffgc.2020.591162): This paper introduces multi-scale routing to RHESSys, allowing users to specify hydrological and energy interactions between sub-patch vegetation.
+
+## Prerequisites
+
+We have tried to keep this book focused on the steps necessary to run RHESSys.
+Consequently, we have had to make the assumption that you, the user, have obtained a number of fundamental skills that are needed to successfully model using RHESSys.
+While it might be possible to get by without learning the following skills, modeling with RHESSys will be easier with the more tools that you obtain.
+
+### Modeling
+
+We assume that the user has obtained basic modeling understanding. This means they understand terms like *parameter*, *calibration*, *validation*, *objective function*, etc. Successful implementation and research design necessitates a basic modeling understanding. Many resources exist for obtaining modeling knowledge.
+
+- Resource here
+
+### Basic R knowledge. 
+
+To model with RHESSys, you will need a basic understanding of [R](https://www.r-project.org/). The RHESSys input/output tools used in this book are all based in R. If you are new to programming in R, a good resource is:
+
+- [Hands on Programming with R](https://rstudio-education.github.io/hopr/) by Garrett Grolemund.
+
+If you are familiar with R and want a refresher that goes a bit beyond the basics, we recommend:
+
+- [R for Data Science](https://r4ds.hadley.nz/) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
+
+### GIS and raster.
+
+Forthcoming
+
+### Basic unix/linux understanding
+
+Often needed when installing RHESSys...
+
+### Git and Github
+
+The RHESSys model can be found on Github. We will walk through the basics of cloning a repository in this book, but knowledge of version control and concepts like branching can be helpful if you expect to move beyond simply using the model. [Github](https://docs.github.com) has extensive tutorials and documentation about Git and Github.
+
+## Getting help
+
+Due to the number of processes involved with RHESSys, the model can be challenging at times.
+There are a number of resources to help you along (besides the book that you are currently reading).
+
+First and foremost, the [RHESSys Wiki](http://github.com/RHESSys/RHESSys/wiki) is the most comprehensive resource for the model.
+By definition, a wiki is a collaborative website generated by its users.
+If you feel inclined while you learn about and become familiar with the model, please feel free to contribute to the wiki.
+
+[RHESSys trainings](https://rhessys.github.io/training.html) are held periodically. We recommend getting on the RHESSys mailing list to be updated as trainings becoming available.
+
+Finally, the RHESSys community is changing as the community grows. We encourage members who want to be active to do so.
+
+## Acknowledgements
+
+Forthcoming
+

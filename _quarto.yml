@@ -1,0 +1,66 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Ecohydrologic Modeling with RHESSys"
+  author: "Ryan R. Bart, Janet S. Choate"
+  page-footer:
+    left: |
+      Ecohydrologic Modeling with RHESSys was written by Ryan R. Bart & Janet S. Choate.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  cover-image: img/rhessys_logo.png
+  site-url: https://ryanrbart.com/rhessys_book/
+  repo-url: https://github.com/ryanrbart/rhessys_book/
+  page-navigation: true
+  chapters:
+    - part: index.qmd
+      chapters:
+        - introduction.qmd
+        - dataset.qmd
+
+    - part: installation.qmd
+      chapters:
+        - simple_installation.qmd
+        - advanced_installation.qmd
+
+    - part: preprocessing.qmd
+      chapters:
+      - spatial_inputs.qmd
+      - worldfile_and_flowtable.qmd
+      - climate_inputs.qmd
+      - def_files.qmd
+
+    - part: running_rhessys.qmd
+      chapters:
+      - simulate_single_locally.qmd
+      - simulate_multiple_locally.qmd
+      - simulate_remotely.qmd
+      - outputs.qmd
+
+    - part: advanced_features.qmd
+      chapters:
+        - vegetation_change.qmd
+        - fire.qmd
+        - multi_scale_routing.qmd
+        - target_driven_spinup.qmd
+
+    - references.qmd
+
+  appendices:
+    - command_line.qmd
+    - legacy_tools.qmd
+    - code_organization.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    number-depth: 2
+  pdf:
+    documentclass: scrreprt
+
+
+
